@@ -1,68 +1,75 @@
 <p align="center">
-    <a href="https://github.com/gitNayu/crunchyroll-client">
-        <img src="https://raw.githubusercontent.com/gitNayu/crunchyroll-client/main/assets/banner.png" alt="Crunchyroll Client">
+    <a href="https://github.com/gitNayu/crunchyroll-sdk">
+        <img src="https://raw.githubusercontent.com/gitNayu/crunchyroll-sdk/main/assets/banner.png" alt="Crunchyroll SDK">
     </a>
 </p>
 
-# Unofficial Crunchyroll Client
+# Unofficial Crunchyroll SDK
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](LICENSE)
-[![Wiki Page](https://img.shields.io/badge/Wiki%20Page-555555?style=flat&logo=github&logoColor=white)](https://github.com/gitNayu/crunchyroll-client/wiki)
+[![Wiki Page](https://img.shields.io/badge/Wiki%20Page-555555?style=flat&logo=github&logoColor=white)](https://github.com/gitNayu/crunchyroll-sdk/wiki)
 [![Python Client](https://img.shields.io/badge/Python%20Client-3776AB?style=flat&logo=python&logoColor=white)](https://github.com/gitNayu/cr-client-py)
-###### Unofficial, open-source client implementations for Crunchyroll.
 
-An independent project providing unofficial Crunchyroll API client implementations in multiple programming languages. Designed to make Crunchyroll's API functionality accessible to developers building their own applications and integrations.
+###### Unofficial, open-source SDK implementations for Crunchyroll.
 
-## Why Crunchyroll Client?
+An independent project providing unofficial Crunchyroll API client implementations in multiple programming languages. Designed to make Crunchyroll's API functionality accessible to developers building their own applications, tools, and integrations.
 
-Interacting with an API directly can mean repeatedly implementing authentication, HTTP requests, response parsing, and error handling.
+## Why Crunchyroll SDK?
 
-Crunchyroll Client aims to simplify that process by providing reusable, open-source implementations that handle these details for you.
+Interacting with an API directly often means repeatedly implementing authentication, HTTP requests, response parsing, and error handling.
 
-- Easy integration – Use existing client functionality instead of implementing everything yourself.
+Crunchyroll SDK aims to simplify this process by providing reusable, open-source client implementations that handle these details for you.
 
-- Structured data – Work with organized API responses.
-
-- Multiple languages – Choose between Python and TypeScript.
-
-- Flexible usage – Integrate the client into your own applications and workflows.
-
-- Open source – Inspect, modify, and contribute to the implementations.
-
-- Spend less time implementing API interactions and more time building your application.
+- **Easy integration** – Use existing client functionality instead of implementing API interactions from scratch.
+- **Structured data** – Work with organized API responses.
+- **Multiple languages** – Choose an implementation that fits your development environment.
+- **Flexible usage** – Integrate the clients into your own applications and workflows.
+- **Open source** – Inspect, modify, and contribute to the implementations.
+- **Developer-focused** – Spend less time implementing API interactions and more time building your application.
 
 ## Disclaimer
+
 This is an independent, **unofficial project**. It is not affiliated with, endorsed by, or associated with *Crunchyroll, LLC*.
+
 Crunchyroll is a trademark of its respective owner.
 
 ### Third-Party Usage and Responsibility
 
-This project is provided as an unofficial API client for development, interoperability, and independent application integrations.
+This project is provided as an unofficial API SDK for development, interoperability, and independent application integrations.
 
-I do not endorse, support, maintain, or take responsibility for third-party repositories, applications, or modifications that use this client to download, redistribute, or otherwise obtain Crunchyroll content without authorization.
+I do not endorse, support, maintain, or take responsibility for third-party repositories, applications, or modifications that use these clients to download, redistribute, or otherwise obtain Crunchyroll content without authorization.
 
-The existence of this client does not imply approval of such projects or their functionality. Third-party developers are solely responsible for their own implementations and how they use this software.
+The existence of this SDK does not imply approval of such projects or their functionality. Third-party developers are solely responsible for their own implementations and how they use this software.
 
 I reserve the right to distance this project from third-party uses that conflict with its intended purpose.
 
+## Client Implementations
+
 ### Python Client
+
 The Python implementation is the primary reference client.
 
 **Repository:** [gitNayu/cr-client-py](https://github.com/gitNayu/cr-client-py)
 
-### Installation
+#### Installation
+
 ```bash
 git clone https://github.com/gitNayu/cr-client-py.git
 cd cr-client-py
 pip install .
 ```
 
-### Keys and Authorization
+### TypeScript Client
+
+Coming soon.
+
+## Authentication and Authorization
 
 **This project does not ship any keys, secrets, tokens, or other authorization data.** You must provide your own.
 
 - No client keys or client secrets are included in this repository.
 - No account logins or tokens are included.
-- You are responsible for how you get and use your keys, and for following the terms of the service.
+- You are responsible for obtaining and using your own credentials in accordance with the service's terms.
 
 #### Setup
 
@@ -79,13 +86,13 @@ pip install .
 
 Example `keys.env` (fake values):
 
-```
+```env
 ACTIVE=ANDROID_TV
 ANDROID_TV=a2V5OnNlY3JldA==
 ANDROID_PHONE=b3RoZXJrZXk6b3RoZXJzZWNyZXQ=
 ```
 
-To make the base64 value:
+To generate the Base64 value:
 
 ```bash
 python3 -c "import base64; print(base64.b64encode(b'key:secret').decode())"
@@ -93,15 +100,12 @@ python3 -c "import base64; print(base64.b64encode(b'key:secret').decode())"
 
 Never commit `keys.env`. It is listed in `.gitignore`. Base64 is not encryption, so keep the file private.
 
-### TypeScript Client
-Coming Soon..
-
-### Quick Start
+## Quick Start
 
 ```python
-from cr_client_py import Crunchyroll
+from crunchyroll_sdk import Client
 
-cr = Crunchyroll()  # no account needed
+cr = Client()  # no account needed
 
 # 1. Search
 hits, key = cr.search('Spy x Family')
@@ -119,9 +123,11 @@ print(urls['images'].get('poster_tall'))
 print(key.label)
 ```
 
-Every function returns `(data, key)`. The library only returns data and URLs. It does not save files or download images.
+Every function returns `(data, key)`. The SDK only returns data and URLs. It does not save files or download images.
 
-### Contact Information
-#### E-Mails:
-##### [mail.nayu@proton.me](mailto:mail.nayu@proton.me)
-##### [crunchyroll-client@protonmail.com](mailto:crunchyroll-client@protonmail.com)
+## Contact Information
+
+**E-mail:**
+
+- [mail.nayu@proton.me](mailto:mail.nayu@proton.me)
+- [crunchyroll-client@protonmail.com](mailto:crunchyroll-client@protonmail.com)
