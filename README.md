@@ -7,7 +7,6 @@
 # Unofficial Crunchyroll SDK
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](LICENSE)
-[![Wiki Page](https://img.shields.io/badge/Wiki%20Page-555555?style=flat&logo=github&logoColor=white)](https://github.com/gitNayu/crunchyroll-sdk/wiki)
 [![Python Client](https://img.shields.io/badge/Python%20Client-3776AB?style=flat&logo=python&logoColor=white)](https://github.com/gitNayu/cr-client-py)
 
 ###### Unofficial, open-source SDK implementations for Crunchyroll.
