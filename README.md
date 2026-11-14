@@ -102,7 +102,7 @@ Never commit `keys.env`. It is listed in `.gitignore`. Base64 is not encryption,
 ## Quick Start
 
 ```python
-from crunchyroll_sdk import Client
+from crunchyroll_client import Client
 
 cr = Client()  # no account needed
 
