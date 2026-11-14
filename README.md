@@ -129,4 +129,3 @@ Every function returns `(data, key)`. The SDK only returns data and URLs. It doe
 **E-mail:**
 
 - [mail.nayu@proton.me](mailto:mail.nayu@proton.me)
-- [crunchyroll-client@protonmail.com](mailto:crunchyroll-client@protonmail.com)
