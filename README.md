@@ -21,7 +21,6 @@ Crunchyroll SDK aims to simplify this process by providing reusable, open-source
 
 - **Easy integration** – Use existing client functionality instead of implementing API interactions from scratch.
 - **Structured data** – Work with organized API responses.
-- **Multiple languages** – Choose an implementation that fits your development environment.
 - **Flexible usage** – Integrate the clients into your own applications and workflows.
 - **Open source** – Inspect, modify, and contribute to the implementations.
 - **Developer-focused** – Spend less time implementing API interactions and more time building your application.
@@ -57,10 +56,6 @@ git clone https://github.com/gitNayu/cr-client-py.git
 cd cr-client-py
 pip install .
 ```
-
-### TypeScript Client
-
-Coming soon.
 
 ## Authentication and Authorization
 
