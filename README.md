@@ -7,7 +7,6 @@
 # Unofficial Crunchyroll SDK
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](LICENSE)
-[![Python Client](https://img.shields.io/badge/Python%20Client-3776AB?style=flat&logo=python&logoColor=white)](https://github.com/gitNayu/cr-client-py)
 
 ###### Unofficial, open-source SDK implementations for Crunchyroll.
 
@@ -47,14 +46,15 @@ I reserve the right to distance this project from third-party uses that conflict
 
 The Python implementation is the primary reference client.
 
-**Repository:** [gitNayu/cr-client-py](https://github.com/gitNayu/cr-client-py)
-
 #### Installation
 
 ```bash
-git clone https://github.com/gitNayu/cr-client-py.git
-cd cr-client-py
+curl -L https://github.com/gitNayu/crunchyroll-sdk/releases/download/1.0.0/crunchyroll_client.zip -o crunchyroll_client.zip
+unzip crunchyroll_client.zip
+cd crunchyroll_client
+
 pip install .
+crunchyroll-client --version
 ```
 
 ## Authentication and Authorization
